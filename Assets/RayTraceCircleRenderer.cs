@@ -13,18 +13,12 @@ public class RayTraceCircleRenderer : RayTraceRenderer
     {
         base.Awake();
         _circleCenter = Vector2.one * 0.5f;
-        _mesh = GetComponent<MeshCollider>().sharedMesh;
-
-        _normals = new List<Vector3>();
-        _tris = new List<int>();
-        _mesh.GetNormals(_normals);
-        _mesh.GetTriangles(_tris, 0);
     }
 
-    public override Color CalculateColor(RaycastHit hitInfo)
+    public override Color CalculateColor(RaycastHit hitInfo, int RecursionDepth, float ambience, Ray originalRay)
     {
         Vector3 interpNormal = GetInterpNormal(hitInfo.barycentricCoordinate, _tris, _normals, hitInfo.triangleIndex);
-        Color lightAmt = CalculateLight(hitInfo.point, interpNormal);
+        Color lightAmt = CalculateLight(hitInfo.point, interpNormal, ambience);
         Color fragColor = Color.white * lightAmt;
 
         float rad = 0.125f;

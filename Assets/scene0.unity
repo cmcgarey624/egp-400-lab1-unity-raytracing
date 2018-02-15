@@ -171,8 +171,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 368081901}
-  m_LocalRotation: {x: 0.19141287, y: -0.077730894, z: 0.7390729, w: 0.64116323}
-  m_LocalPosition: {x: 0.016, y: 0.953, z: -1.48}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.703, y: 0.507, z: -0.635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -205,7 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d279947b3851674469e4f6ebb9bd9aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _downsampling: 8
+  _downsampling: 1
+  _recursionDepth: 3
+  _ambience: 0.1
 --- !u!4 &578288543
 Transform:
   m_ObjectHideFlags: 0
@@ -314,9 +316,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1004763635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f0dca0381b3e4d4583b201c1520090b, type: 3}
+  m_Script: {fileID: 11500000, guid: e75f7231df9f5a9418353d3e1b093d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _color: {r: 1, g: 0, b: 0, a: 0}
+  _reflectivity: 0.5
 --- !u!1 &1325820560
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +402,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1325820560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 0.21, z: -0.43}
+  m_LocalPosition: {x: 1.41, y: 0.54, z: 1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -412,10 +416,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1325820560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ae03d6537cbb1041a08f3f452be5f10, type: 3}
+  m_Script: {fileID: 11500000, guid: e75f7231df9f5a9418353d3e1b093d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _color: {r: 0.19528548, g: 0.3874928, b: 0.9485294, a: 1}
+  _color: {r: 0, g: 0.21379304, b: 1, a: 0}
+  _reflectivity: 0.5
 --- !u!1 &2056681540
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,10 +516,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2056681540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ae03d6537cbb1041a08f3f452be5f10, type: 3}
+  m_Script: {fileID: 11500000, guid: e75f7231df9f5a9418353d3e1b093d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _color: {r: 0.08145209, g: 0.5441177, b: 0.020004313, a: 1}
+  _color: {r: 0.4068966, g: 1, b: 0, a: 0}
+  _reflectivity: 1
 --- !u!1 &2127925600
 GameObject:
   m_ObjectHideFlags: 0
